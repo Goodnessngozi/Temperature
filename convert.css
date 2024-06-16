@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    background-color: blue;
+}
+.main{
+    height: 50px;
+    background-color: white;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+}
+ul h2{
+    color: blue;
+    font-weight: bold;
+    margin-top: 10px;
+    z-index: 100;
+}
+ul h2 span{
+    color: black;
+}
+ul li{
+    list-style: none;
+    margin-top: 10px;
+}
+ul li a{
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 1s ease-in-out;
+}
+ul li a:hover{
+    color: rgb(2, 2, 128);
+}
+
+
+/* ........................section2............... */
+.converter{
+    height: 500px;
+    width: 35%;
+    background-color: white;
+    margin-top: 60px;
+    margin-left: 35%;
+    border-radius: 25px;
+}
+.converter h1{
+    color: blue;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 30px;
+}
+.converter label{
+    margin-left: 45%;
+    font-size: 20px;
+    margin-top: auto;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+.converter select{
+    height: 30px;
+    width: 80%;
+    margin-top: 10px;
+    margin-left: 40px;
+    border: none;
+    border: 3px solid blue;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.converter #temprature{
+    height: 30px;
+    width: 80%;
+    margin-top: 10px;
+    margin-left: 40px;
+    border: none;
+    border: 3px solid blue;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.converter button{
+    height: 30px;
+    width: 80%;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.5s ease-in-out;
+    margin-top: 10px;
+    margin-left: 40px;
+    border: none;
+    border: 3px solid blue;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.converter button:hover{
+    background-color: black;
+    border-color: black;
+}
+.converter #result{
+    height: 30px;
+    width: 80%;
+    margin-top: 10px;
+    margin-left: 40px;
+    border: none;
+    border: 3px solid blue;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
