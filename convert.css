@@ -1,46 +1,57 @@
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-body{
-    background-color: blue;
+
+body {
+    background-color: #F7F4E9;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
-.main{
+
+.main {
     height: 50px;
     background-color: white;
 }
 
-ul{
+ul {
     display: flex;
     justify-content: space-around;
 }
-ul h2{
+
+ul h2 {
     color: blue;
     font-weight: bold;
     margin-top: 10px;
     z-index: 100;
 }
-ul h2 span{
+
+ul h2 span {
     color: black;
 }
-ul li{
+
+ul li {
     list-style: none;
     margin-top: 10px;
 }
-ul li a{
+
+ul li a {
     color: blue;
     text-decoration: none;
     font-weight: bold;
     transition: 1s ease-in-out;
 }
-ul li a:hover{
+
+ul li a:hover {
     color: rgb(2, 2, 128);
 }
 
 
 /* ........................section2............... */
-.converter{
+.converter {
     height: 500px;
     width: 35%;
     background-color: white;
@@ -48,20 +59,29 @@ ul li a:hover{
     margin-left: 35%;
     border-radius: 25px;
 }
-.converter h1{
+
+.converter-grid {
+    display: grid;
+    grid-template-rows: auto;
+    background-color: #C9E4CA;
+}
+
+.converter h1 {
     color: blue;
     text-align: center;
     padding-top: 20px;
     font-size: 30px;
 }
-.converter label{
+
+.converter label {
     margin-left: 45%;
     font-size: 20px;
     margin-top: auto;
     margin-bottom: 40px;
     font-weight: bold;
 }
-.converter select{
+
+.converter select {
     height: 30px;
     width: 80%;
     margin-top: 10px;
@@ -71,7 +91,8 @@ ul li a:hover{
     border-top-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-.converter #temprature{
+
+.converter #temprature {
     height: 30px;
     width: 80%;
     margin-top: 10px;
@@ -81,7 +102,8 @@ ul li a:hover{
     border-top-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-.converter button{
+
+.converter button {
     height: 30px;
     width: 80%;
     background-color: blue;
@@ -97,11 +119,13 @@ ul li a:hover{
     border-top-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-.converter button:hover{
+
+.converter button:hover {
     background-color: black;
     border-color: black;
 }
-.converter #result{
+
+.converter #result {
     height: 30px;
     width: 80%;
     margin-top: 10px;
@@ -110,4 +134,22 @@ ul li a:hover{
     border: 3px solid blue;
     border-top-left-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+
+/* my style  */
+.round {
+    background-color: #87CEEB;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 47px;
+    font-weight: bold;
+    /* color: #cd0a0a; */
+}
+
+#result {
+    margin: auto;
 }
