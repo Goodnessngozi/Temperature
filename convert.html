@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="convert.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main class="container">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 :gap-10 justify-items-center content-center h-screen">
+            <div class="card bg-[#E5E0EC] p-10">
+                <div class="clock-container grid grid-flow-col gap-5 text-center auto-cols-max mb-5">
+                    <div class="md:flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                      <span class=" font-mono text-5xl">
+                        <span id="hours"></span>
+                      </span>
+                      hours
+                    </div>
+                    <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                      <span class="font-mono text-5xl">
+                        <span id="minutes"></span>
+                      </span>
+                      min
+                    </div>
+                    <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                      <span class="font-mono text-5xl">
+                        <span id="seconds"></span>
+                      </span>
+                      sec
+                    </div>
+                  </div>
+                  <div class="form-control">
+                    <label class="label cursor-pointer">
+                      <span class="label-text font-bold font-mono p-2">Switch to 12-Hour Format</span> 
+                      <input id="toggleFormat" type="checkbox" class="toggle" checked />
+                    </label>
+                  </div>
+                <div>
+                    <div class="result-group">
+                        <div class="round" id="result">00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div class="card w-[40rem] bg-[#F7F4E9] md:h-[30rem] shadow-xl glass">
+                    <h2 class="card-title text-4xl pt-2 justify-center">Temperature Converter</h2>
+                    <div class="card-body">
+                        <form class="p-5" onsubmit="convert(event)">
+                            <div class="form-control">
+                                <div class="label">
+                                    <span class="label-text">From:</span>
+                                    <span class="label-text-alt">conversion type</span>
+                                </div>
+                                <select id="fromunit" class="select select-accent w-full max-w-xs">
+                                    <option value="">Select Unit</option>
+                                    <option value="C">Celsius</option>
+                                    <option value="F">Fahrenheit</option>
+                                    <option value="K">Kelvin</option>
+                                    <option value="R">Rankine</option>
+                                </select>
+                            </div>
+                            <div class="form-control">
+                                <div class="label">
+                                    <span class="label-text">To</span>
+                                    <span class="label-text-alt">conversion type</span>
+                                </div>
+                                <select id="tounit" class="select select-accent w-full max-w-xs">
+                                    <option value="" disabled selected>Select Unit</option>
+                                    <option value="C">Celsius</option>
+                                    <option value="F">Fahrenheit</option>
+                                    <option value="K">Kelvin</option>
+                                    <option value="R">Rankine</option>
+                                </select>
+                            </div>
+                            <div class="pt-10 pb-5 form-control">
+                                <label class="input input-bordered flex items-center gap-2">
+                                    <input type="number" id="temperature" class="grow"
+                                        placeholder="enter temperature ..." />
+                                    <span class="badge badge-warning">Temperature</span>
+                                </label>
+                            </div>
+                            <div class="card-actions justify-center mt-5">
+                                <button type="submit"
+                                    class="btn btn-wide glass bg-[#66CCCC] hover:bg-[#C9E4CA] hover:border-1">Convert</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="temp.js"></script>
+</body>
+
+</html>
